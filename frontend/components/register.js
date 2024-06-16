@@ -34,7 +34,7 @@ const Register = () => {
         const {account, name, email, department, contact} = inpval;
 
         //to send data from frontend to backend using fetchAPI
-        const res = await fetch("/register", {
+        const res = await fetch("https://crud-app-donut.vercel.app/register", {
             method : "POST",
             headers : {
                 "Content-Type" : "application/json"

@@ -17,7 +17,7 @@ const Home = () => {
    
 
     //to send data from frontend to backend using fetchAPI
-    const res = await fetch("https://crud-app-donut.vercel.app/getdata", {
+    const res = await fetch("/getdata", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -42,7 +42,7 @@ const Home = () => {
 
   const deleteuser = async (id) => {
 
-    const res2 = await fetch(`https://crud-app-donut.vercel.app/deleteuser/${id}`, {
+    const res2 = await fetch(`/deleteuser/${id}`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"

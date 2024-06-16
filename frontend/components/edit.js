@@ -26,7 +26,7 @@ const Edit = () => {
 
     const getdata = async () => {
         try {
-            const res = await fetch(`https://crud-app-donut.vercel.app/getuser/${id}`, {
+            const res = await fetch(`/getuser/${id}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -53,7 +53,7 @@ const Edit = () => {
         const { account, name, email, department, contact } = inpval;
 
         try {
-            const res = await fetch(`https://crud-app-donut.vercel.app/updateuser/${id}`, {
+            const res = await fetch(`updateuser/${id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json"

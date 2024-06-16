@@ -18,7 +18,7 @@ const Details = () => {
     useEffect(() => {
         const getdata = async () => {
             try {
-                const res = await fetch(`/getuser/${id}`, {
+                const res = await fetch(`https://crud-app-donut.vercel.app/getuser/${id}`, {
                     method: "GET",
                     headers: {
                         "Content-Type": "application/json"
@@ -40,7 +40,7 @@ const Details = () => {
 
     const deleteuser = async () => {
         try {
-            const res = await fetch(`/deleteuser/${id}`, {
+            const res = await fetch(`https://crud-app-donut.vercel.app/deleteuser/${id}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"

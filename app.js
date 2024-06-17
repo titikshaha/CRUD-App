@@ -10,12 +10,16 @@ require("./db/conn");
 
 const port = process.env.PORT || 8000;
 
-app.use(cors());
-app.use(express.json());
+app.use(cors({
+    origin: ["https://crud-app-donut.vercel.app/"],
+    methods: ["POST" , "GET"],
+    credentials: true
+}
+            ));
 
-app.get("/" , (req,res) =>{
-    res.json("backend start")
-})
+mongoose.connect('mongodb+srv://titiksha5248:<passcrud>@crudcluster.rtoobvx.mongodb.net/crudapp?retryWrites=true&w=majority&appName=crudcluster'); 
+
+app.use(express.json());
 
 // Routes
 app.use(router);
